@@ -1,0 +1,184 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Sağ üst dark mode butonu */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
+}
+
+.form-card,
+.result-card {
+    border: none;
+    border-radius: 22px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.required {
+    color: red;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.btn {
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.result-item {
+    background-color: #f8f9fa;
+    border-left: 5px solid #0d6efd;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.result-item p {
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+.main-result {
+    background-color: #e7f1ff;
+    text-align: center;
+    border-left: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.time-detail {
+    display: block;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #121212, #2b2b2b);
+    color: #f1f1f1;
+}
+
+.dark-mode .theme-toggle {
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .form-card,
+.dark-mode .result-card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+.dark-mode .text-muted {
+    color: #cfcfcf !important;
+}
+
+.dark-mode .form-control {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+.dark-mode .form-control:focus {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border-color: #66b2ff;
+    box-shadow: 0 0 0 0.25rem rgba(102, 178, 255, 0.25);
+}
+
+.dark-mode .form-check-label,
+.dark-mode .form-label {
+    color: #f1f1f1;
+}
+
+.dark-mode .result-item {
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+    border-left-color: #66b2ff;
+}
+
+.dark-mode .main-result {
+    background-color: #123456;
+    color: #ffffff;
+}
+
+.dark-mode hr {
+    border-color: #555555;
+}
+
+.dark-mode .btn-secondary {
+    background-color: #555555;
+    border-color: #555555;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .card-body {
+        padding: 22px !important;
+    }
+
+    .main-result {
+        font-size: 20px;
+    }
+
+    .result-item p {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+    }
+}
